@@ -1,8 +1,8 @@
 # Project: Sorting_algorithms & Big O
 ## Language: C
-### Authors: Pedro Arbilla @parbilla y Roberto Ribeiro @rmribeiro-uy
+#### Authors: Pedro Arbilla @parbilla y Roberto Ribeiro @rmribeiro-uy
 
-#### Learning Objectives
+### Learning Objectives
 
 At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
 General
@@ -12,9 +12,9 @@ General
     How to select the best sorting algorithm for a given input
     What is a stable sorting algorithm
 
-##### Mandatory Tasks
+### Mandatory Tasks
 
-l. Bubble sort
+0. Bubble sort
 Write a function that sorts an array of integers in ascending order using the Bubble sort algorithm
 
     Prototype: void bubble_sort(int *array, size_t size);
@@ -27,7 +27,7 @@ Write in the file 0-O, the big O notations of the time complexity of the Bubble 
     in the worst case
 
 
-l. Insertion sort
+1. Insertion sort
 Write a function that sorts a doubly linked list of integers in ascending order using the Insertion sort algorithm
 
     Prototype: void insertion_sort_list(listint_t **list);
@@ -41,7 +41,7 @@ Write in the file 1-O, the big O notations of the time complexity of the Inserti
     in the worst case
 
 
-l. Selection sort
+2. Selection sort
 Write a function that sorts an array of integers in ascending order using the Selection sort algorithm
 
     Prototype: void selection_sort(int *array, size_t size);
@@ -54,7 +54,7 @@ Write in the file 2-O, the big O notations of the time complexity of the Selecti
     in the worst case
 
 
-l. Quick sort
+3. Quick sort
 
 Write a function that sorts an array of integers in ascending order using the Quick sort algorithm
 
@@ -68,4 +68,3 @@ Write in the file 3-O, the big O notations of the time complexity of the Quick s
     in the best case
     in the average case
     in the worst case
-
