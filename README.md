@@ -14,7 +14,7 @@ General
 
 ##### Mandatory Tasks
 
-1. Bubble sort
+l. Bubble sort
 Write a function that sorts an array of integers in ascending order using the Bubble sort algorithm
 
     Prototype: void bubble_sort(int *array, size_t size);
@@ -27,7 +27,7 @@ Write in the file 0-O, the big O notations of the time complexity of the Bubble 
     in the worst case
 
 
-1. Insertion sort
+l. Insertion sort
 Write a function that sorts a doubly linked list of integers in ascending order using the Insertion sort algorithm
 
     Prototype: void insertion_sort_list(listint_t **list);
@@ -41,7 +41,7 @@ Write in the file 1-O, the big O notations of the time complexity of the Inserti
     in the worst case
 
 
-1. Selection sort
+l. Selection sort
 Write a function that sorts an array of integers in ascending order using the Selection sort algorithm
 
     Prototype: void selection_sort(int *array, size_t size);
@@ -54,7 +54,7 @@ Write in the file 2-O, the big O notations of the time complexity of the Selecti
     in the worst case
 
 
- 1. Quick sort
+l. Quick sort
 
 Write a function that sorts an array of integers in ascending order using the Quick sort algorithm
 
