@@ -12,7 +12,7 @@
 void selection_sort(int *array, size_t size)
 {
 	size_t index1, index2;
-	int to_swap, last_position = 0, tmp;
+	int to_swap, tmp;
 
 	for (index1 = 0; index1 < size; index1++)
 	{
@@ -22,10 +22,12 @@ void selection_sort(int *array, size_t size)
 			if (array[index2] < array[to_swap])
 				to_swap = index2;
 		}
-		tmp = array[to_swap];
-		array[to_swap] = array[last_position];
-		array[last_position] = tmp;
-		last_position += 1;
-		print_array(array, size);
+		if (to_swap != (int)index1)
+		{
+			tmp = array[index1];
+			array[index1] = array[to_swap];
+			array[to_swap] = tmp;
+			print_array(array, size);
+		}
 	}
 }
