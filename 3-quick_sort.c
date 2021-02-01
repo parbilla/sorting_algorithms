@@ -23,6 +23,7 @@ void quick_sort(int *array, size_t size)
  * @array: pointer to array.
  * @low: low index.
  * @high: high index.
+ * @size: length of the array
  *
  * Return: Always 0
  */
@@ -44,6 +45,7 @@ void the_really_quicksort(int *array, int low, int high, int size)
  * @array: pointer to array.
  * @low: low index.
  * @high: high index
+ * @size: length of the array
  *
  * Return: i + 1
  */
