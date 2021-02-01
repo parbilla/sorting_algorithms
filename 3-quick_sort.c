@@ -68,9 +68,12 @@ int partition(int *array, int low, int high, int size)
 			}
 		}
 	}
-	tmp = array[i + 1];
-	array[i + 1] = array[high];
-	array[high] = tmp;
-	print_array(array, size);
+	if (array[high] != array[i + 1])
+	{
+		tmp = array[i + 1];
+		array[i + 1] = array[high];
+		array[high] = tmp;
+		print_array(array, size);
+	}
 	return (i + 1);
 }
