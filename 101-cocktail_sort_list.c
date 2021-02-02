@@ -54,8 +54,9 @@ void cocktail_sort_list(listint_t **list)
 			next_node = node->next;
 		else
 		{
-			flag == 1;
-			
+			flag = 1;
+			next_node = node->prev;
+		}
 		/*printf("node: %i\nprev: %i\nnext: %i\n", node->n, node->prev->n, next_node->n);*/
 		while (node->prev != NULL && node->prev->n > node->n)
 		{
@@ -82,7 +83,7 @@ void cocktail_sort_list(listint_t **list)
 		{
 			while (node->prev != NULL && node->n < node->prev->n)
 			{
-				printf("estoy en el tercer while");
+				/*printf("estoy en el tercer while");*/
 				prev_node = node->next;
 				node->next = node->prev;
 				node->prev = node->prev->prev;
