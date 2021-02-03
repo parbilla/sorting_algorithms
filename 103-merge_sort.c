@@ -1,5 +1,61 @@
 #include "sort.h"
 
+void merge_arrays(int *array, int prin, int mit, int fin)
+{
+	int i, j, k, n1 = mit - prin + 1, n2 = fin - mit;
+	int L[100], R[100];
+
+        /* Copy data to temp array*/
+	for (i = 0; i < n1; i++)
+		L[i] = array[prin + i];
+	for (j = 0; j < n2; j++)
+		R[j] = array[mit + 1 + j];
+        /* Merge the temp arrays*/
+	i = 0;
+	j = 0;
+	k = prin;
+	while (i < n1 && j < n2)
+	{
+		if (L[i] <= R[j])
+		{
+			array[k] = L[i];
+			i++;
+		}
+		else
+		{
+			array[k] = R[j];
+			j++;
+		}
+		k++;
+	}
+        /* Copy the remaining elements of L[]*/
+	while (i < n1)
+	{
+		array[k] = L[i];
+		i++;
+		k++;
+	}
+        /* Copy the remaining elements of R[]*/
+	while (j < n2)
+	{
+		array[k] = R[j];
+		j++;
+		k++;
+	}
+}
+
+void merge_recursion(int *array, int prin, int fin)
+{
+        int mit;
+
+        if (prin >= fin)
+                return;
+        mit = (fin + prin - 1) / 2;
+        merge_recursion(&array[prin], prin, mit);
+        merge_recursion(&array[mit + 1], mit + 1, fin);
+        merge_arrays(array, prin, mit, fin);
+}
+
 /**
  * merge_sort - Sorts an array of integers in ascending order
  * using the Merge sort algorithm
@@ -11,73 +67,10 @@
  */
 void merge_sort(int *array, size_t size)
 {
-	int n = (int)size, m;
-	int *left, *right;
+        int fin = (int)size - 1, prin = 0;
 
-	if (array == NULL || size < 2)
-		return;
+        if (array == NULL || size < 2)
+                return;
 
-	m = n / 2;
-	if (n % 2 == 0)
-	{
-	       	merge_recursion(left, m);
-		merge_recursion(right, m);
-	}
-	else
-	{
-		merge_recursion(left, m);
-		merge_recursion(right, m + 1);
-	}
-}
-
-
-void merge_recursion(int *half, int m)
-{
-	if (n == 1)
-		return;
-
-	half = malloc(m * sizeof(int));
-	if (half == NULL)
-		return;
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	while (n > 0)
-	{
-		new_n = 0;
-		for (i = 0; i < n - 1; i++)
-		{
-			if (array[i] > array[i + 1])
-			{
-				swap = array[i];
-				array[i] = array[i + 1];
-				array[i + 1] = swap;
-				new_n = i + 1;
-				print_array(array, size);
-			}
-		}
-		n = new_n;
-	}
+        merge_recursion(&array[prin], prin, fin);
 }
